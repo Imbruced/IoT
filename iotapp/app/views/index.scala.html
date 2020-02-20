@@ -1,0 +1,15 @@
+@import helper._
+
+@(userForm: Form[KafkaForm])(implicit messages: Messages)
+
+@main("Scala Play forms tutorial") {
+<h1>Scala Play forms tutorial</h1>
+
+
+@form(action = routes.KafkaControler.simpleForm()) {
+@inputText(userForm("topic"))
+@inputText(userForm("message"))
+
+<input type="submit" value="Submit">
+}
+}
